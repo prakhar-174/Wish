@@ -7,24 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content">
-        <h1>Happy Birthday!</h1>
-        <h2>Vanshika</h2>
-        <div class="divider"></div>
-        <p>On this special day, I want to celebrate you and all the joy you bring to my life. May your day be filled with love, laughter, and wonderful memories!</p>
-        <div class="buttons">
-            <button class="btn btn-purple" id="openCard">Open Your Card</button>
+
+    <section class="page-main">
+        <div class="content">
+            <h1>Happy Birthday!</h1>
+            <h2>Vanshika</h2>
+            <div class="divider"></div>
+            <p>On this special day, I want to celebrate you and all the joy you bring to my life. May your day be filled with love, laughter, and wonderful memories!</p>
+            <div class="buttons">
+                <button class="btn btn-purple" id="openCard">Open Your Card</button>
+            </div>
         </div>
-    </div>
-    
-    <div id="birthdayCard">
-        <button id="closeCard">×</button>
-        <div id="cardContent">
-            <h2>Happy Birthday!</h2>
-            <p>Wishing you a day that's as special as you are!</p>
-            <p>May your year ahead be filled with success, happiness, and all the things you love.</p>
+        
+        <div id="birthdayCard">
+            <button id="closeCard">×</button>
+            <div id="cardContent">
+                <h2>Happy Birthday!</h2>
+                <p>Wishing you a day that's as special as you are!</p>
+                <p>May your year ahead be filled with success, happiness, and all the things you love.</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="celebration-section">
+        <div class="container">
+            <h1>Counting Down to Your Special Day</h1>
+            <div class="divider"></div>
+            <p class="subtitle">The anticipation is building! Let's count down the moments until we celebrate you.</p>
+            
+            <div class="countdown-card">
+                <div class="corner-decoration"></div>
+                <div class="corner-decoration-2"></div>
+                
+                <div class="message">
+                    Can't wait to celebrate your birthday! The countdown has begun for your special day. Get ready for an amazing celebration filled with joy and surprises!
+                </div>
+                
+                <button class="btn-c" id="confettiButton">Celebrate Now!</button>
+            </div>
+            
+            <p class="quote">"Birthdays are the universe's way of telling us we matter."</p>
+        </div>
+    </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>

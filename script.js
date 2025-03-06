@@ -14,7 +14,8 @@ function createBalloons() {
         
         // Random balloon properties
         const size = Math.random() * 30 + 40;
-        const left = Math.random() * 100;
+        // Adjust left position to account for balloon width
+        const left = Math.random() * (90 - size/window.innerWidth * 100); // Constrains balloons within viewport
         const delay = Math.random() * 10;
         const duration = Math.random() * 10 + 10;
         const color = colors[Math.floor(Math.random() * colors.length)];

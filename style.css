@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    /* position: relative; */
+}
+
+.page-main {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #4a1d6e, #222222, #4a1d6e);
     color: white;
@@ -24,14 +30,15 @@ body {
     max-width: 800px;
 }
 
-h1 {
+.content h1 {
     font-size: 5rem;
     color: #ff69b4;
     margin-bottom: 1rem;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Pacifico', cursive;
 }
 
-h2 {
+.content h2 {
     font-size: 2.5rem;
     color: #ffd700;
     margin-bottom: 2rem;
@@ -44,7 +51,7 @@ h2 {
     margin: 0 auto 2rem;
 }
 
-p {
+.content p {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 3rem;
@@ -181,4 +188,103 @@ p {
 #cardContent p {
     color: #333;
     font-size: 1.3rem;
+}
+
+.celebration-section{
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;          
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
+.container h1 {
+    font-size: 3rem;
+    color: #8a63e8;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.countdown-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.message {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #ff69b4;
+    margin-bottom: 1.5rem;
+}
+
+.corner-decoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 192, 203, 0.1);
+    right: -50px;
+    top: -50px;
+}
+
+.corner-decoration-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(138, 99, 232, 0.1);
+    left: -30px;
+    bottom: -30px;
+}
+
+.quote {
+    font-style: italic;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.btn-c {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #8a63e8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(138, 99, 232, 0.3);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.btn-c:hover {
+    background-color: #7653d6;
+    transform: translateY(-3px);
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background-color: #8a63e8;
+    margin: 0 auto 3rem;
 }
