@@ -81,3 +81,11 @@ document.getElementById('confettiButton').addEventListener('click', () => {
         origin: { y: 0.6 }
     });
 });
+
+function flipCard(event) {
+    // If we're handling a button click, prevent it from also triggering the card's onclick
+    if (event) {
+      event.stopPropagation();
+    }
+    document.querySelector('.secret-card').classList.toggle('flipped');
+  }

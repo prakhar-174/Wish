@@ -5,8 +5,11 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     width: 100%;
+    box-sizing: border-box;
     /* position: relative; */
 }
 
@@ -297,15 +300,16 @@ html, body {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    overflow: hidden;
+    /* overflow-x: hidden; */
+    box-sizing: border-box;
 }
 
-.memory-heading{
+.memory-heading,.moments-heading{
     text-align: center;
     margin-bottom: 40px;
 }
 
-.memory-title {
+.memory-title, .moments-heading h2 {
     font-size: 48px;
     font-weight: bold;
     color: #ff69b4;
@@ -313,7 +317,7 @@ html, body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.memory-subtitle {
+.memory-subtitle, .moments-heading p{
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -328,6 +332,7 @@ html, body {
 .memories-container1 {
     max-width: 700px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .memory-card {
@@ -415,4 +420,308 @@ html, body {
         margin-bottom: 15px;
         order: -1;
     }
+}
+.happy-moments{
+    background: linear-gradient(135deg, #222222, #4a1d6e, #222222);
+    font-family: 'Pacifico', cursive;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+.moments-container{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+.moment-item {
+    height: 350px;
+    width: 275px;
+    min-width: 140px;
+    background-color: #3d3d3d;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.moment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.secret-section {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    /* height: auto; */
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.secret-card-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    position: relative;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.secret-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+.secret-card-front, .secret-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.secret-card-front {
+    background: linear-gradient(135deg, #e83e8c, #6f42c1);
+    color: white;
+}
+
+.secret-card-back {
+    background: #f8f9fa;
+    transform: rotateY(180deg);
+    color: #333;
+}
+
+.secret-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.cake-icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.heart-icon {
+    background-color: #e83e8c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.secret-card-front h1 {
+    font-size: 36px;
+    margin: 10px 0 5px;
+}
+
+.secret-subtitle {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.open-button {
+    background-color: white;
+    color: #e83e8c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.secret-message-container {
+    width: 90%;
+    border: 2px dashed #e83e8c;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.heart-center {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    padding: 0 10px;
+}
+
+.to-friend {
+    text-align: center;
+    color: #7952b3;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    color: #e83e8c;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Background decorations */
+.background-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.circle-1 {
+    width: 120px;
+    height: 120px;
+    background-color: #e0cfff;
+    top: -60px;
+    left: -60px;
+}
+
+.circle-2 {
+    width: 80px;
+    height: 80px;
+    background-color: #ffaadd;
+    bottom: -40px;
+    right: -40px;
+}
+
+.heart-deco {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 30px;
+}
+
+.star-deco {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+}
+
+.tap-hint {
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.7;
+    width: 100%;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .secret-card-container {
+        height: auto;
+        min-height: 450px;
+    }
+
+    .secret-card {
+        position: relative;
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .secret-card-front,
+    .secret-card-back {
+        padding: 15px;
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .secret-card-front h1 {
+        font-size: 28px;
+    }
+
+    .secret-subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .secret-message-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .to-friend {
+        font-size: 20px;
+    }
+
+    /* Adjust decorative elements */
+    .circle-1 {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+        left: -40px;
+    }
+
+    .circle-2 {
+        width: 60px;
+        height: 60px;
+        bottom: -30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secret-card-container {
+        min-height: 500px;
+    }
+
+    .secret-card,
+    .secret-card-front,
+    .secret-card-back {
+        min-height: 500px;
+    }
+
+    .secret-card-front h1 {
+        font-size: 24px;
+    }
+}
+
+footer {
+    background: linear-gradient(135deg, #4a1d6e, #222222, #4a1d6e);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
 }
