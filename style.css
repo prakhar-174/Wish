@@ -451,6 +451,7 @@ html, body {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 .moment-item:hover {
